@@ -51,8 +51,8 @@ extern keymap_config_t keymap_config;
 
 #ifdef BLUETOOTH_ENABLE
 #    include "outputselect.h"
-#    ifdef MODULE_ADAFRUIT_BLE
-#        include "adafruit_ble.h"
+#    ifdef BLUETOOTH_BLUEFRUIT_LE
+#        include "bluefruit_le.h"
 #    elif MODULE_RN42
 #        include "rn42.h"
 #    endif
@@ -835,8 +835,8 @@ uint8_t keyboard_leds(void) {
 void send_keyboard(report_keyboard_t *report) {
 #ifdef BLUETOOTH_ENABLE
     if (where_to_send() == OUTPUT_BLUETOOTH) {
-#    ifdef MODULE_ADAFRUIT_BLE
-        adafruit_ble_send_keys(report->mods, report->keys, sizeof(report->keys));
+#    ifdef BLUETOOTH_BLUEFRUIT_LE
+        bluefruit_le_send_keys(report->mods, report->keys, sizeof(report->keys));
 #    elif MODULE_RN42
         rn42_send_keyboard(report);
 #    endif

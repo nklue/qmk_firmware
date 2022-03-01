@@ -13,3 +13,7 @@ DEBOUNCE_TYPE = sym_eager_pk
 
 #Specify firmware format that is copied to root qmk_firmware folder
 FIRMWARE_FORMAT = hex
+
+# BLE
+BLUETOOTH_ENABLE = yes
+BLUETOOTH_DRIVER = BluefruitLE

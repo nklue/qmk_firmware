@@ -72,6 +72,11 @@
             LINE_PIN6   /* COL_6 */ \
     }
 
+/* Bluefruit pins */
+#define BLUEFRUIT_LE_RST_PIN LINE_PIN32
+#define BLUEFRUIT_LE_IRQ_PIN LINE_PIN33
+#define BLUEFRUIT_LE_CS_PIN  LINE_PIN14
+
 #define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
